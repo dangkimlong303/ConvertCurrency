@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Conversion</title>
+</head>
+<body>
+
+    <form>
+        <b>Amount:</b><input type="text" id="txtAmount">
+
+        <b>From Currency:</b><select id="fromCurrency">
+            <option value="usd" >USD</option>
+            <option value="yen" >YEN</option>
+            <option value="euro" >EURO</option>
+        </select>
+
+        <input type="text" id="txtVND">
+        <button type="button" id="btnConvert" onclick="convert();" >Convert</button>
+    </form>
+
+    <script>
+        function convert() {
+            var typeAmount = parseInt(document.getElementById("txtAmount").value);
+            var fromCurrency = document.getElementById("fromCurrency").value;
+            var output = document.getElementById("txtVND");
+
+            if(fromCurrency == "yen"){
+                output.value = (typeAmount * 207);
+            }else if(fromCurrency == "usd"){
+                output.value = (typeAmount * 23200);
+            }else if(fromCurrency == "euro"){
+                output.value = (typeAmount * 27297);
+            }
+        }
+
+     //   var dollar = document.getElementById("usd").value;
+      //  var yen = document.getElementById("yen").value;
+    //    var euro = document.getElementById("euro").value;
+
+/*
+        var btnConvert = document.getElementById("btnConvert");
+*/
+
+      /*  btnConvert.addEventListener('click',function () {
+          if(selectValue == usd){
+              document.write("usdddddd");
+          }else if (selectValue == yen){
+              document.write("yennnnn");
+          } else if (selectValue == euro){
+              document.write("euroooooo");
+          }
+        })*/
+    </script>
+</body>
+</html>
